@@ -4,14 +4,14 @@
     $dbServer="localhost";
     
     //XAMPP
-    $dbName = "koolit";
-    $dbUid = "root";
-    $dbPassword = "";
+    // $dbName = "koolit";
+    // $dbUid = "root";
+    // $dbPassword = "";
 
     //HostPapa
-    // $dbName = "kooli631_koolit";
-    // $dbUid = "kooli631_dbcomm";
-    // $dbPassword = "9LFJM3PTZMISHDUQIB";
+    $dbName = "kooli631_koolit";
+    $dbUid = "kooli631_dbcomm";
+    $dbPassword = "9LFJM3PTZMISHDUQIB";
 
     $dbConn = mysqli_connect($dbServer, $dbUid, $dbPassword, $dbName);
     

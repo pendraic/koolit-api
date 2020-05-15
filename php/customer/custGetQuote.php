@@ -57,7 +57,7 @@
              CURRENT_TIMESTAMP,
              '0',
              '{$itemId}',
-             (SELECT id FROM employee WHERE employee.type = '{$enumEmployeeTypeManager}' LIMIT 1),
+             (SELECT id FROM employee WHERE employee.user_type = '{$enumEmployeeTypeManager}' LIMIT 1),
              (SELECT id FROM technician WHERE technician.serviceTypeId = '{$itemServTypeId}' LIMIT 1),
              '{$orderAddress}',
              '{$orderCustomer}',

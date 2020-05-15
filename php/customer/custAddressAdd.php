@@ -19,7 +19,7 @@
             VALUES (NULL, '{$addrLatitude}', '{$addrLongitude}', '{$addrText}', '{$customerId}') ";
     
             if(!mysqli_query($dbConn, $sql))
-                throw new Exception($responseDatabaseTaskError . "cannot add address");
+                throw new Exception($responseDatabaseTaskError . " cannot add address");
 
             $response = $responseAddressAdd;
 

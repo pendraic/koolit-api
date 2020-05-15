@@ -20,7 +20,7 @@
         $sqlAppend .= "CURRENT_DATE";
 
         $sql = 
-        "SELECT service_order.id, customer.name,
+        "SELECT service_order.id, customer.customer_name,
 		address.latitude, address.longitude, address.address,
         service_item.imageUrl, service_item.quantity, service_order.totalValue
         FROM service_order
@@ -50,7 +50,7 @@
             while($sqlRow = mysqli_fetch_assoc($sqlResult)){
 
                 $responseObjectItem->Id = $sqlRow['id'];
-                $responseObjectItem->CustomerName = $sqlRow['name'];
+                $responseObjectItem->CustomerName = $sqlRow['customer_name'];
                 $responseObjectItem->AddressLatitude = $sqlRow['latitude'];
                 $responseObjectItem->AddressLongitude = $sqlRow['longitude'];
                 $responseObjectItem->Address = $sqlRow['address'];
