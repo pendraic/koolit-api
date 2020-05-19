@@ -15,10 +15,10 @@
             //Change service order status to cancelled
             $sqlService = 
             "UPDATE service_order SET
-            service_order.status = '0',
+            service_order.status = '2',
             service_order.technicianNotes = '{$reasonCancel}'
             WHERE service_order.id = '{$serviceOrderId}'";
-    
+
             if(!mysqli_query($dbConn, $sqlService))
                 throw new Exception($responseDatabaseTaskError . " update status");
 

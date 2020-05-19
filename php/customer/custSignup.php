@@ -4,7 +4,7 @@
     include '../messages.php'; 
 
     //'customer'
-    $customerName = stripslashes($_POST['customer_name']);
+    $customerName = stripslashes($_POST['name']);
     $customerContactNumber = stripslashes($_POST['contactNumber']);
     $customerEmail = stripslashes($_POST['email']);
     $customerPassword = hash($hashAlgo , ($_POST['password']));

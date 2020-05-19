@@ -7,9 +7,9 @@
 
     if($dbConn){
         $sql = 
-        "SELECT COUNT(*) AS userCount
-        FROM user_account
-        WHERE user_account.email = '{$userEmail}'";
+        "SELECT COUNT(*) AS accountCount
+        FROM customer
+        WHERE customer.email = '{$userEmail}'";
 
         $sqlResult = mysqli_query($dbConn, $sql);
 
@@ -17,7 +17,7 @@
             
         //Put data here
         //Make sure property reflects object from xamarin app in resources
-        $response = $sqlRow['userCount'];
+        $response = $sqlRow['accountCount'];
     }
 
     echo $response;
