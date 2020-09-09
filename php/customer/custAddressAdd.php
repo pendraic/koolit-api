@@ -17,7 +17,7 @@
             $sql = 
             "INSERT INTO address (id, latitude, longitude, address, customerId)
             VALUES (NULL, '{$addrLatitude}', '{$addrLongitude}', '{$addrText}', '{$customerId}') ";
-    
+
             if(!mysqli_query($dbConn, $sql))
                 throw new Exception($responseDatabaseTaskError . " cannot add address");
 

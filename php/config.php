@@ -9,7 +9,7 @@
     // $dbPassword = "";
 
     //HostPapa
-    $dbName = "kooli631_koolit";
+    $dbName = "kooli631_koolit2";
     $dbUid = "kooli631_dbcomm";
     $dbPassword = "9LFJM3PTZMISHDUQIB";
 
