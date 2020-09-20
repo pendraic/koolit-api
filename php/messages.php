@@ -29,6 +29,8 @@
 
     $responseAccUpdCred = "Updated password!";
     $responseAccUpdCredError = "Cannot update password!";
+    $responseAccResetPwdErr = "Cannot change password for ";
+    $responseAccResetPwd = "Password changed for ";
 
     $responseServOrdAcceptErr = "Error in accepting service order";
     $responseServOrdAcceptSuccess = "Accepted service order!";

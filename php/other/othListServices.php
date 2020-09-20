@@ -12,6 +12,7 @@
         $sql = 
         "SELECT *
         FROM service_type
+        WHERE id > 0
         ORDER BY name";
 
         $sqlResult = mysqli_query($dbConn, $sql);
