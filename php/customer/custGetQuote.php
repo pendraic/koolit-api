@@ -58,7 +58,7 @@
              '0',
              '{$itemId}',
              (SELECT id FROM employee WHERE employee.user_type = '{$enumEmployeeTypeManager}' LIMIT 1),
-             (SELECT id FROM technician WHERE technician.serviceTypeId = '{$itemServTypeId}' LIMIT 1),
+             '0',
              '{$orderAddress}',
              '{$orderCustomer}',
              '0',

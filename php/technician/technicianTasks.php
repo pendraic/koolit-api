@@ -5,6 +5,7 @@
 
     $isToday = $_POST['isToday'];
     $technicianId = $_POST['technicianId'];
+    $custDate = $_POST['customerDate'];
 
     $response = "No result";
 
@@ -16,8 +17,8 @@
             $sqlAppend = " = ";
         elseif($isToday == "False")
             $sqlAppend = " > ";
-
-        $sqlAppend .= "CURRENT_DATE";
+            
+        $sqlAppend .= "'" . $custDate . "'";    
 
         $sql = 
         "SELECT service_order.id, customer.customer_name,
