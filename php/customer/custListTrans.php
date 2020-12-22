@@ -4,6 +4,7 @@
     include '../messages.php';
 
     $customerId = $_POST['customerId'];
+    $customerDate =  $_POST['customerDate'];
     $transactDisplay = $_POST['transactDisplay'];
     $sqlCond = "";
 
@@ -22,7 +23,7 @@
         //marked cancelled or finished by technicians
     }
 
-    $sqlAppend .= "CURRENT_DATE";
+    $sqlAppend .= $customerDate;
 
     if($dbConn){
 
