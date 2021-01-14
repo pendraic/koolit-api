@@ -18,7 +18,7 @@
         ON service_type.id = service_item.serviceTypeId
         AND service_order.customerId = '{$customerId}'
         WHERE service_order.schedule <= CURRENT_DATE
-        AND service_order.status != '0'
+        AND service_order.status = '1'
         ORDER BY service_order.schedule DESC LIMIT 10";
 
         $sqlResult = mysqli_query($dbConn, $sql);

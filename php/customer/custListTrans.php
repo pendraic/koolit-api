@@ -18,7 +18,7 @@
     }
     elseif($transactDisplay == "Pending"){
         $sqlAppend = " >= ";
-        $sqlCond = " AND service_order.status = '0' AND service_order.quoteStatus != '2'";
+        $sqlCond = " AND service_order.status != '2' AND service_order.quoteStatus = '0'";
         //Pending tasks are orders that has not yet been declined by the customer and not has yet been
         //marked cancelled or finished by technicians
     }
