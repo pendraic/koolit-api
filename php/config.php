@@ -9,9 +9,14 @@
     // $dbPassword = "";
 
     //HostPapa
-    $dbName = "kooli631_koolit3";
-    $dbUid = "kooli631_dbcomm";
-    $dbPassword = "9LFJM3PTZMISHDUQIB";
+    // $dbName = "kooli631_koolit3";
+    // $dbUid = "kooli631_dbcomm";
+    // $dbPassword = "9LFJM3PTZMISHDUQIB";
+
+    //Hostinger.ph
+    $dbName = "u337776481_kooli631_kooli";
+    $dbUid = "u337776481_kooli631_dbcom";
+    $dbPassword = "t^4n/4n=cH1";
 
     $dbConn = mysqli_connect($dbServer, $dbUid, $dbPassword, $dbName);
     
@@ -20,6 +25,6 @@
 
     $hashAlgo = 'sha512';
 
-    $smtpServer = "mail.koolit.xyz";
-    $smtpPort = "467";
+    $smtpServer = "smtp.hostinger.ph";
+    $smtpPort = " 587";
 ?>
