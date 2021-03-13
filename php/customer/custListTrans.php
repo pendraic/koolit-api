@@ -7,6 +7,7 @@
     $customerDate =  $_POST['customerDate'];
     $transactDisplay = $_POST['transactDisplay'];
     $sqlCond = "";
+    $sqlOrderType = "";
 
     $response = $responseDatabaseTaskError;
 
@@ -15,6 +16,7 @@
 
     if($transactDisplay == "History"){
         $sqlAppend = " < ";
+        $sqlOrderType = " DESC";
     }
     elseif($transactDisplay == "Pending"){
         $sqlAppend = " >= ";
@@ -23,7 +25,7 @@
         //marked cancelled or finished by technicians
     }
 
-    $sqlAppend .= $customerDate;
+    $sqlAppend .= "'" . $customerDate . "'";
 
     if($dbConn){
 
@@ -41,7 +43,7 @@
         ON service_type.id = service_item.serviceTypeId
         WHERE service_order.customerId = '{$customerId}'
         AND service_order.schedule {$sqlAppend} {$sqlCond}
-        ORDER BY service_order.schedule DESC";
+        ORDER BY service_order.schedule {$sqlOrderType}";
 
         $sqlResult = mysqli_query($dbConn, $sql);
 
@@ -72,6 +74,8 @@
         }
     }else
         $response = $responseDatabaseConnectError;
+
+    //$response = $otherSQL . "\n" . $transactDisplay;    
 
     echo $response;
 

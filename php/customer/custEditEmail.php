@@ -15,14 +15,15 @@
             $sql = 
             "UPDATE customer
             SET 
-            customer.email = '{$customerEmail}'
+            customer.email = '{$customerEmail}',
+            customer.validated = '0'
             WHERE 
             customer.id = '{$customerId}'";
     
             if(!mysqli_query($dbConn, $sql))
                 throw new Exception($responseDatabaseTaskError . " updating email");
 
-            $response = $responseProfileUpdate . " email";
+            $response = $responseProfileUpdate . " email. Please confirm account!";
 
         }catch(Exception $e){
             $response = $e->getMessage();
