@@ -21,8 +21,9 @@
     $responseInsertErrorAddress = "Address record error!";
 
     $responseLogError = "Cannot log your action!";
-
-    $responseFeedbackSuccess = "Feedback submitted for service order";
+    
+    $responseFeedbackReportSuccess = "Problem report has been submitted for service order";
+    $responseFeedbackRatingSuccess = "Feedback submitted for service order";
 
     $responseIsValidated = " is validated!";
     $responseIsNotValidated = " is not validated!";
