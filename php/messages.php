@@ -65,8 +65,7 @@
 
     $taskMarkCancelledReasonHeader = "Task cancelled due to: ";
 
-    $mailTitle = "Kool-IT Confirm account";
-    $mailTitleResetPwd = "Kool-IT Reset Password";
+    $mailTitleConfirm = "Kool-IT Confirm account";
+    $mailTitleReset = "Kool-IT Reset Password";
     $mailSendError = "Sending mail error";
-    
 ?>

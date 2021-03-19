@@ -24,7 +24,4 @@
     $dateFormat = "Y-m-d";
 
     $hashAlgo = 'sha512';
-
-    $smtpServer = "smtp.hostinger.ph";
-    $smtpPort = " 587";
 ?>
