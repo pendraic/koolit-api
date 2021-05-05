@@ -31,8 +31,7 @@
 
         $sql = 
         "SELECT service_order.id, service_order.schedule, 
-        service_order.quoteStatus, service_order.status, 
-        service_order.timestamp, service_order.totalValue,
+        service_order.quoteStatus, service_order.status,
         service_type.name, service_item.imageUrl, service_item.quantity
         FROM service_order
         JOIN customer
