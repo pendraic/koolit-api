@@ -1,4 +1,5 @@
 <?php
+    #Sample change
 
     #Store strings here and add an "include 'php/messages.php'" on the file
     #using any of the following variables
