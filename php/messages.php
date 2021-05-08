@@ -1,5 +1,6 @@
 <?php
     #Sample change and change and change and change
+    #Sample change
     #Store strings here and add an "include 'php/messages.php'" on the file
     #using any of the following variables
     $responseDatabaseConnectError = "Connection error!";
