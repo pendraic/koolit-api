@@ -28,6 +28,7 @@
             $responseObject->Name = $sqlRow['customer_name'];
             $responseObject->ContactNumber = $sqlRow['contactNumber'];
             $responseObject->Email = $sqlRow['email'];
+            $responseObject->Validated = $sqlRow['validated'];
     
             $response = json_encode($responseObject);
         }
