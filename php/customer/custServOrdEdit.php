@@ -14,11 +14,12 @@
     $response = $responseDatabaseTaskError;
 
     if($dbConn){
-        
         try{
-
             $sqlUpd = 
-            "UPDATE service_order SET schedule = '{$serviceOrderSched}'
+            "UPDATE service_order 
+            SET 
+            schedule = '{$serviceOrderSched}',
+            reschedule_limit = reschedule_limit + 1
             WHERE service_order.id = '{$serviceOrderId}' ";
     
             if(!mysqli_query($dbConn, $sqlUpd))
@@ -29,7 +30,6 @@
         }catch(Exception $e){
             $reponse = $e->getMessage();
         }
-
     }else
         $response = $responseDatabaseConnectError;
 
